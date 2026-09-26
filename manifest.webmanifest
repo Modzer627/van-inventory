@@ -1,0 +1,17 @@
+{
+  "id": "/van-inventory/",
+  "name": "Van Inventory",
+  "short_name": "Van",
+  "description": "Work-van parts inventory: scan barcodes to add or remove stock, find the shelf, run quarterly counts and export to Excel.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#12100d",
+  "theme_color": "#12100d",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

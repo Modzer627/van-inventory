@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Van Inventory</title>
+  <meta name="description" content="Work-van parts inventory: scan barcodes to add or remove stock, find the shelf, run quarterly counts and export to Excel.">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f2ea">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#12100d">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Van">
+  <link rel="stylesheet" href="./css/app.css">
+  <script defer src="./vendor/sheetjs/xlsx.full.min.js"></script>
+  <script defer src="./vendor/barcode-detector/ponyfill.js"></script>
+  <script type="module" src="./js/app.js"></script>
+</head>
+<body>
+  <div id="app">
+    <section id="screen-scan" class="screen screen-scan" hidden>
+      <video id="scan-video" playsinline muted autoplay></video>
+      <div id="scan-flash"></div>
+      <div id="scan-ui"></div>
+    </section>
+    <section id="screen-parts" class="screen" hidden></section>
+    <section id="screen-part" class="screen" hidden></section>
+    <section id="screen-shelves" class="screen" hidden></section>
+    <section id="screen-shelf" class="screen" hidden></section>
+    <section id="screen-count" class="screen" hidden></section>
+    <section id="screen-count-review" class="screen" hidden></section>
+    <section id="screen-count-detail" class="screen" hidden></section>
+    <section id="screen-insights" class="screen" hidden></section>
+    <section id="screen-settings" class="screen" hidden></section>
+    <section id="screen-locations" class="screen" hidden></section>
+    <nav id="tabbar" aria-label="Main">
+      <button data-tab="scan"><span class="ico">📷</span>Scan</button>
+      <button data-tab="parts"><span class="ico">📦</span>Parts</button>
+      <button data-tab="shelves"><span class="ico">🗄️</span>Shelves</button>
+      <button data-tab="count"><span class="ico">✅</span>Count</button>
+      <button data-tab="insights"><span class="ico">📊</span>Insights</button>
+    </nav>
+  </div>
+  <div id="sheet-root"></div>
+  <div id="toast-root"></div>
+  <noscript><p style="padding:2rem">Van Inventory needs JavaScript enabled.</p></noscript>
+</body>
+</html>
