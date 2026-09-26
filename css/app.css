@@ -1,6 +1,7 @@
 /* Van Inventory — layered surfaces, amber accent, persistent tab bar.
    Light/dark via prefers-color-scheme. Components adapted from StockTracker. */
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+[hidden] { display: none !important; }
 
 :root {
   --bg: #f6f2ea;
